@@ -1,10 +1,5 @@
 const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'];
-
 const listIngredients = document.querySelector('#ingredients');
+const markup = ingredients.map(ingredient => `<li class="item">${ingredient}</li>`).join('');
 
-for (const ingredient of ingredients) {
-  const addLiItem = document.createElement('li');
-  addLiItem.classList.add('item');
-  addLiItem.textContent = ingredient;
-  listIngredients.append(addLiItem);
-}
+listIngredients.insertAdjacentHTML('afterbegin', markup);
