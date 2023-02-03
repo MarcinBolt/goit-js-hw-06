@@ -9,8 +9,8 @@
 // }
 
 const listCategories = document.querySelector('#categories');
-const listCategoriesLength = listCategories.children.length;
-console.log(`Number of categories: ${listCategoriesLength}`);
+const childrenLengthOfListCategories = listCategories.children.length;
+console.log(`Number of categories: ${childrenLengthOfListCategories}`);
 
 const liItemsOfListCategories = listCategories.querySelectorAll('li.item');
 
