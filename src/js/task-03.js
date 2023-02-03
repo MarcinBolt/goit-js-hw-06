@@ -12,3 +12,8 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const listIngredients = document.querySelector('.gallery');
+listIngredients.style.display = 'flex';
+const markup = images.map(image => `<li><img src=${image.url} alt = ${image.alt}/></li>`).join('');
+listIngredients.insertAdjacentHTML('afterbegin', markup);
