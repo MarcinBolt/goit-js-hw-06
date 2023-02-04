@@ -14,6 +14,6 @@ const images = [
 ];
 
 const listIngredients = document.querySelector('.gallery');
-listIngredients.style.display = 'flex';
+listIngredients.style.display = 'grid';
 const markup = images.map(image => `<li><img src=${image.url} alt = ${image.alt}/></li>`).join('');
 listIngredients.insertAdjacentHTML('afterbegin', markup);
