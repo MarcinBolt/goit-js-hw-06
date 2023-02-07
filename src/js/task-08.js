@@ -11,7 +11,8 @@ function handleSubmit(event) {
   if (email.value === '' || password.value === '') {
     return alert('Please fill in all the fields!');
   }
-
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
+  const userInputData = { email: email.value, password: password.value };
+  console.log(userInputData);
+  // console.log(`Email: ${email.value}, Password: ${password.value}`);
   event.currentTarget.reset();
 }
