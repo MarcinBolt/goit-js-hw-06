@@ -19,19 +19,15 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
-  divBoxes.remove();
-  divControl.insertAdjacentHTML('afterend', divIdBoxesEmptyTag);
+  divBoxes.textContent = '';
   tableOfDiv = [];
   numberInput.value = '';
-
-  return (divBoxes = document.querySelector('div#boxes'));
 }
 
 const numberInput = document.querySelector('input');
 const buttonCreate = document.querySelector('button[data-create]');
 const buttonDestroy = document.querySelector('button[data-destroy]');
-const divIdBoxesEmptyTag = `<div id="boxes"></div>`;
-let divBoxes = document.querySelector('div#boxes');
+const divBoxes = document.querySelector('div#boxes');
 const divControl = document.querySelector('div#controls');
 let tableOfDiv = [];
 
