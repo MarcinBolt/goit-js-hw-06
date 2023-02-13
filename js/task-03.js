@@ -13,14 +13,14 @@ const images = [
   },
 ];
 
-const listIngredients = document.querySelector('.gallery');
-listIngredients.style.display = 'flex';
-listIngredients.style.justifyContent = 'center';
-listIngredients.style.paddingInline = '0px';
-listIngredients.style.gap = '20px';
+const listOfImages = document.querySelector('.gallery');
+listOfImages.style.display = 'flex';
+listOfImages.style.justifyContent = 'center';
+listOfImages.style.paddingInline = '0px';
+listOfImages.style.gap = '20px';
 
-listIngredients.style.listStyleType = 'none';
+listOfImages.style.listStyleType = 'none';
 const markup = images
   .map(image => `<li><img src=${image.url} alt = ${image.alt} height = "250px"/></li>`)
   .join('');
-listIngredients.insertAdjacentHTML('afterbegin', markup);
+listOfImages.insertAdjacentHTML('afterbegin', markup);
