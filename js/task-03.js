@@ -14,7 +14,13 @@ const images = [
 ];
 
 const listIngredients = document.querySelector('.gallery');
-listIngredients.style.display = 'grid';
+listIngredients.style.display = 'flex';
+listIngredients.style.justifyContent = 'center';
+listIngredients.style.paddingInline = '0px';
+listIngredients.style.gap = '20px';
+
 listIngredients.style.listStyleType = 'none';
-const markup = images.map(image => `<li><img src=${image.url} alt = ${image.alt}/></li>`).join('');
+const markup = images
+  .map(image => `<li><img src=${image.url} alt = ${image.alt} height = "250px"/></li>`)
+  .join('');
 listIngredients.insertAdjacentHTML('afterbegin', markup);
